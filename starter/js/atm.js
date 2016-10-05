@@ -1,14 +1,49 @@
 //Begin with the document ready function
+  $(document).ready(function() {
+    document.body.style.backgroundColor = "red";
+    $( "#depositChecking" ).click(function() {
+    console.log( "Hello World" );
+  });
+
+
+});
+
+var checkingBalance = 0;
+var savingsBalance = 0;
+
 
     //Checking account deposit function
+    function depositChecking() {
 
+      var amount = parseInt(document.querySelector('#amountChecking').value);
+      document.querySelector('#amountChecking').value = "";
+
+      checkingBalance += amount;
+
+      document.querySelector('#checkingBalance').html = "$" + checkingBalance;
+
+      if (checkingBalance === 0) {
+        document.querySelector('#checkingBalance').className = "balance";
+      }
+      else {
+        document.querySelector('#checkingBalance').className = "balance";
+
+      }
+    }
       //On click of the depositChecking button
 
-        //Get value from the amountChecking input field
+
+
+
+
+
+    //Get value from the amountChecking input field
 
         //Take that value and add it to the existing value in the checkingBalance div
 
     //Checking account withdrawl funtion
+
+
 
       //On click of the withdrawChecking button
 
