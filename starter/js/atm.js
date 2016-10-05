@@ -1,73 +1,99 @@
 //Begin with the document ready function
-  $(document).ready(function() {
-    document.body.style.backgroundColor = "red";
-    $( "#depositChecking" ).click(function() {
-    console.log( "Hello World" );
-  });
-
-
+      $(document).ready(function() {
+        document.body.style.backgroundColor = "red";
+  //On click of the depositChecking button
+      $("#depositChecking").click(function() {
+        depositChecking();
+      });
+  //On click of the withdrawChecking button
+      $("#withdrawChecking").click(function() {
+        withdrawChecking();
+      });
+  //On click of the depositSavings button
+      $("#depositSavings").click(function() {
+        depositSavings();
+      });
+  //On click of the withdrawlSavings button
+      $("#withdrawSavings").click(function() {
+        withdrawSavings();
+      });
 });
 
-var checkingBalance = 0;
-var savingsBalance = 0;
-
+  // var checkingBalance = 0;
 
     //Checking account deposit function
-    function depositChecking() {
 
-      var amount = parseInt(document.querySelector('#amountChecking').value);
-      document.querySelector('#amountChecking').value = "";
+  function depositChecking() {
 
-      checkingBalance += amount;
+    var amount = $("#amountChecking").val();
 
-      document.querySelector('#checkingBalance').html = "$" + checkingBalance;
+    checkingBalance += amount;
 
-      if (checkingBalance === 0) {
-        document.querySelector('#checkingBalance').className = "balance";
-      }
-      else {
-        document.querySelector('#checkingBalance').className = "balance";
+    $("#checkingBalance").html("$" + amount);
 
-      }
-    }
-      //On click of the depositChecking button
-
-
+};
 
 
 
 
     //Get value from the amountChecking input field
 
+
+
         //Take that value and add it to the existing value in the checkingBalance div
 
     //Checking account withdrawl funtion
+    function withdrawChecking() {
+    //Get value from the amountChecking input field
+      var amount = $("#amountChecking").val();
+    //Take that value and add it to the existing value in the checkingBalance div
+      checkingBalance -= amount;
 
+      if (amountChecking > checkingBalance) {
+        return false;
+      }else {
+        checkingBalance - amountChecking;
 
+        $(checkingBalance).val()
+      }
 
-      //On click of the withdrawChecking button
-
-        //Get value from the amountChecking input field
-
+};
         // If that value is greater than the value in the account ignore that action
         // In other words if this would put the account into a negative balance do not allow it
 
         //Else subtract that value from the current amount in the checking account
 
     //Savings account deposit function
+    function depositSavings() {
+    //Get value from the amountSavings input field
+      var amount = $("#amountSavings").val();
+    //Take that value and add it to the existing value in the savingsBalance div
+      savingsBalance += amount;
 
-      //On click of the depositSavings button
+      $("#savingsBalance").html("$" + amount);
 
-        //Get value from the amountSavings input field
+};
 
-        //Take that value and add it to the existing value in the savingsBalance div
+  //Take that value and add it to the existing value in the savingsBalance div
+
+
 
     //Savings account withdraw funtion
+    function withdrawSavings() {
+    //Get value from the amountSavings input field
+      var amount = $("#amountSavings#").val();
+    //Take that value and add it to the existing value in the checkingBalance div
+      csavingsBalance -= amount;
 
-      //On click of the withdrawl button
+      if (amountSavings > savingsBalance) {
+        return false;
+      }else {
+        savingsBalance - amountSavings;
 
-        //Get value from the amountSavings input field
+        $(savingsBalance).val()
+      }
 
+};
          //If that value is greater than the value in the account ignore that action
          //In other words if this would put the account into a negative balance do not allow it
 
