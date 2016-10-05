@@ -21,10 +21,10 @@
 
   // var checkingBalance = 0;
 
-    //Checking account deposit function
+//Checking account deposit function
 
   function depositChecking() {
-
+    //Get value from the amountChecking input field
     var amount = $("#amountChecking").val();
 
     checkingBalance += amount;
@@ -36,26 +36,26 @@
 
 
 
-    //Get value from the amountChecking input field
+
 
 
 
         //Take that value and add it to the existing value in the checkingBalance div
 
-    //Checking account withdrawl funtion
-    function withdrawChecking() {
+//Checking account withdrawl funtion
+  function withdrawChecking() {
     //Get value from the amountChecking input field
-      var amount = $("#amountChecking").val();
+    var amount = $("#amountChecking").val();
     //Take that value and add it to the existing value in the checkingBalance div
-      checkingBalance -= amount;
+    checkingBalance -= amount;
 
-      if (amountChecking > checkingBalance) {
-        return false;
-      }else {
-        checkingBalance - amountChecking;
+    if (amountChecking > checkingBalance) {
+      return false;
+    }else {
+      checkingBalance - amountChecking;
 
-        $(checkingBalance).val()
-      }
+      $(checkingBalance).val()
+  }
 
 };
         // If that value is greater than the value in the account ignore that action
@@ -63,14 +63,14 @@
 
         //Else subtract that value from the current amount in the checking account
 
-    //Savings account deposit function
-    function depositSavings() {
+//Savings account deposit function
+  function depositSavings() {
     //Get value from the amountSavings input field
-      var amount = $("#amountSavings").val();
+    var amount = $("#amountSavings").val();
     //Take that value and add it to the existing value in the savingsBalance div
-      savingsBalance += amount;
+    savingsBalance += amount;
 
-      $("#savingsBalance").html("$" + amount);
+    $("#savingsBalance").html("$" + amount);
 
 };
 
@@ -78,20 +78,20 @@
 
 
 
-    //Savings account withdraw funtion
-    function withdrawSavings() {
+//Savings account withdraw funtion
+  function withdrawSavings() {
     //Get value from the amountSavings input field
-      var amount = $("#amountSavings#").val();
+    var amount = $("#amountSavings").val();
     //Take that value and add it to the existing value in the checkingBalance div
-      csavingsBalance -= amount;
+    savingsBalance -= amount;
 
-      if (amountSavings > savingsBalance) {
-        return false;
-      }else {
-        savingsBalance - amountSavings;
+    if (amountSavings > savingsBalance) {
+      return false;
+    }else {
+      savingsBalance - amountSavings;
 
-        $(savingsBalance).val()
-      }
+      $(savingsBalance).val()
+  }
 
 };
          //If that value is greater than the value in the account ignore that action
